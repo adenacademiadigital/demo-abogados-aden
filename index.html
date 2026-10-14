@@ -26,7 +26,7 @@
             background-color: var(--bg-light);
             color: var(--text);
             line-height: 1.6;
-            padding-bottom: 100px;
+            padding-bottom: 110px;
         }
 
         /* HEADER & HERO */
@@ -216,10 +216,75 @@
             border-color: var(--primary);
         }
 
+        /* FOOTER SECTIONS */
+        footer.firm-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 2.5rem 1.5rem 1.5rem;
+            margin-top: 3rem;
+            border-top: 3px solid var(--accent);
+        }
+
+        .footer-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-light);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 0.4rem;
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        /* REDES SOCIALES */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--accent-light);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
         /* BOTÓN FLOTANTE WHATSAPP */
         .floating-whatsapp {
             position: fixed;
-            bottom: 75px;
+            bottom: 60px;
             right: 20px;
             background: #25d366;
             color: white;
@@ -236,25 +301,24 @@
             border: 2px solid white;
         }
 
-        /* FOOTER BAR */
+        /* STICKY BAR ADEN */
         .sticky-footer {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: #0f172a;
+            background: #020617;
             color: white;
-            padding: 0.8rem 1rem;
+            padding: 0.7rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 2px solid var(--accent);
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(197, 160, 89, 0.4);
             z-index: 1000;
         }
 
         .footer-brand {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: #94a3b8;
         }
 
@@ -266,10 +330,10 @@
         .agency-link {
             color: var(--accent-light);
             text-decoration: none;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 600;
             border: 1px solid var(--accent);
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 4px;
             background: rgba(197, 160, 89, 0.1);
         }
@@ -397,12 +461,54 @@
 
     </div>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/573215467418?text=Hola,%20quisiera%20cotizar%20un%20sitio%20web%20jur%C3%ADdico%20con%20Agencia%20ADEN" target="_blank" class="floating-whatsapp">
-        💬 Consulta Directa
+    <!-- FOOTER COMPLETO DE LA FIRMA FICTICIA DE MUESTRA -->
+    <footer class="firm-footer">
+        <div class="footer-grid">
+            
+            <!-- COLUMNA 1: DATOS DE LA FIRMA -->
+            <div class="footer-col">
+                <h4>Dr. Javier Morales & Asoc.</h4>
+                <p>Estudio jurídico especializado en derecho corporativo, civil y litigios. Compromiso, confidencialidad y soluciones legales efectivas.</p>
+                
+                <!-- REDES SOCIALES -->
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">📘</a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">📸</a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">💼</a>
+                    <a href="https://maps.google.com" target="_blank" class="social-icon" title="Google Maps">📍</a>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2: ATENCIÓN Y CONTACTO -->
+            <div class="footer-col">
+                <h4>Sede Principal</h4>
+                <ul>
+                    <li>📍 Edificio Centro Empresarial, Piso 4, Ofic. 402</li>
+                    <li>📞 PBX: (604) 444 0000</li>
+                    <li>📱 Cel / WhatsApp: +57 321 546 7418</li>
+                    <li>✉️ contacto@javiermoralesabogados.com</li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA 3: HORARIOS DE ATENCIÓN -->
+            <div class="footer-col">
+                <h4>Horario Presencial</h4>
+                <ul>
+                    <li>🕒 Lunes a Viernes: 8:00 AM - 12:00 PM | 2:00 PM - 6:00 PM</li>
+                    <li>🕒 Sábados: 8:00 AM - 12:00 PM (Previa Cita)</li>
+                    <li>⚡ Canal Virtual 24/7 mediante el Portal de Minutas.</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP DEL DESPACHO -->
+    <a href="https://wa.me/573215467418?text=Hola,%20quisiera%20consultar%20sobre%20un%20servicio%20jur%C3%ADdico" target="_blank" class="floating-whatsapp">
+        💬 Atencion WhatsApp
     </a>
 
-    <!-- STICKY FOOTER DE LA AGENCIA ADEN -->
+    <!-- STICKY BARRA INFERIOR AGENCIA ADEN DIGITAL -->
     <div class="sticky-footer">
         <div class="footer-brand">
             <strong>DEMO INTERACTIVA ADEN</strong>
