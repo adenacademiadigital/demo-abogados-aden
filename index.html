@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Javier Morales & Asociados | Estudio Jurídico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #c5a059;
+            --accent-light: #e5c889;
+            --bg-light: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        /* HEADER & HERO */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .logo-badge {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            background: rgba(197, 160, 89, 0.08);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        p.subtitle {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        /* METRICS COUNTER */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .metric-item h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-light);
+            font-size: 1.5rem;
+        }
+
+        .metric-item p {
+            font-size: 0.75rem;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 800px;
+            margin: -2rem auto 0;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-header {
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title span {
+            color: var(--accent);
+        }
+
+        /* FORM STYLES */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text);
+            background-color: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+        }
+
+        /* BTN STYLES */
+        .btn-whatsapp {
+            display: width: 100%;
+            width: 100%;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+        }
+
+        /* TABS OR TOGGLE */
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            background: #f1f5f9;
+            color: #64748b;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* FOOTER BAR */
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0f172a;
+            color: white;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid var(--accent);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .footer-brand {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .footer-brand strong {
+            color: var(--accent-light);
+            display: block;
+        }
+
+        .agency-link {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header>
+        <div class="logo-badge">Estudio Jurídico & LegalTech</div>
+        <h1>DR. JAVIER MORALES<br>& ASOCIADOS</h1>
+        <p class="subtitle">Soluciones jurídicas de alto nivel, blindaje corporativo y gestión automatizada de trámites para personas y empresas.</p>
+        
+        <div class="metrics-grid">
+            <div class="metric-item">
+                <h3>+15</h3>
+                <p>Años Exp.</p>
+            </div>
+            <div class="metric-item">
+                <h3>98%</h3>
+                <p>Efectividad</p>
+            </div>
+            <div class="metric-item">
+                <h3>+900</h3>
+                <p>Casos</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <div class="container">
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title"><span>⚖️</span> Portal Directo de Solicitudes</div>
+            </div>
+
+            <div class="mode-selector">
+                <div class="tab-btn active" onclick="setMode('minuta')">📜 Solicitar Minuta / Documento</div>
+                <div class="tab-btn" onclick="setMode('consulta')">🔍 Evaluación de Caso</div>
+            </div>
+
+            <!-- FORMULARIO 1: MINUTAS -->
+            <div id="section-minuta">
+                <div class="form-group">
+                    <label>Seleccione el Tipo de Minuta o Documento</label>
+                    <select id="minuta_tipo">
+                        <option value="Contrato de Arrendamiento">Contrato de Arrendamiento (Vivienda / Comercial)</option>
+                        <option value="Promesa de Compraventa">Promesa de Compraventa de Inmueble/Vehículo</option>
+                        <option value="Contrato Individual de Trabajo">Contrato de Trabajo / Laboral</option>
+                        <option value="Poder Especial">Poder Especial Notarial</option>
+                        <option value="Estatutos o Constitución de Empresa">Estatutos para Constitución de Sociedad</option>
+                        <option value="Acuerdo de Confidencialidad (NDA)">Acuerdo de Confidencialidad / NDA</option>
+                        <option value="Otro Documento Personalizado">Otra Minuta / Requerimiento Especial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre Completo / Razón Social</label>
+                    <input type="text" id="minuta_nombre" placeholder="Ej. Juan Pérez / Inversiones ABC S.A.S.">
+                </div>
+
+                <div class="form-group">
+                    <label>Ciudad o Municipio del Trámite</label>
+                    <input type="text" id="minuta_ciudad" placeholder="Ej. Medellín / Apartadó / Bogotá">
+                </div>
+
+                <div class="form-group">
+                    <label>Detalles adicionales para la Minuta (Opcional)</label>
+                    <textarea id="minuta_detalles" rows="3" placeholder="Mencione datos clave como montos, fechas o condiciones especiales..."></textarea>
+                </div>
+
+                <button class="btn-whatsapp" onclick="enviarMinuta()">
+                    📲 Enviar Solicitud de Minuta por WhatsApp
+                </button>
+            </div>
+
+            <!-- FORMULARIO 2: EVALUACIÓN DE CASO -->
+            <div id="section-consulta" style="display: none;">
+                <div class="form-group">
+                    <label>Área del Derecho</label>
+                    <select id="consulta_area">
+                        <option value="Derecho Corporativo y Comercial">Derecho Corporativo & Comercial</option>
+                        <option value="Derecho Laboral">Derecho Laboral (Empresa o Empleado)</option>
+                        <option value="Derecho Inmobiliario y Civil">Derecho Inmobiliario / Civil</option>
+                        <option value="Derecho Penal / Litigios">Derecho Penal & Defensas</option>
+                        <option value="Derecho de Familia">Derecho de Familia / Sucesiones</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo de Cliente</label>
+                    <select id="consulta_tipo">
+                        <option value="Persona Natural">Persona Natural</option>
+                        <option value="Empresa / Persona Jurídica">Empresa / Persona Jurídica</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre de Contacto</label>
+                    <input type="text" id="consulta_nombre" placeholder="Su nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label>Breve Resumen de su Caso</label>
+                    <textarea id="consulta_resumen" rows="3" placeholder="Describa brevemente la situación o el problema jurídico a consultar..."></textarea>
+                </div>
+
+                <button class="btn-whatsapp" onclick="enviarConsulta()">
+                    📲 Agendar Evaluación Estratégica
+                </button>
+            </div>
+
+        </div>
+
+        <!-- GARANTÍA DE CONFIDENCIALIDAD -->
+        <div class="card" style="text-align: center; background: #faf5eb; border-color: #e5c889;">
+            <p style="font-size: 0.85rem; color: #78350f; font-weight: 600;">
+                🔒 AMPARADO BAJO SECRETO PROFESIONAL Y RESERVA LEGAL<br>
+                <span style="font-weight: 300; font-size: 0.8rem; color: #92400e;">
+                    Toda la información proporcionada a través de esta plataforma es estrictamente confidencial.
+                </span>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- STICKY FOOTER DE LA AGENCIA ADEN -->
+    <div class="sticky-footer">
+        <div class="footer-brand">
+            <strong>DEMO INTERACTIVA ADEN</strong>
+            <span>Despacho Digital & LegalTech</span>
+        </div>
+        <a href="https://agencia-aden.vercel.app/" target="_blank" class="agency-link">⚡ Ver Agencia ADEN</a>
+    </div>
+
+    <script>
+        // CAMBIO DE TABS
+        function setMode(mode) {
+            const tabMinuta = document.querySelectorAll('.tab-btn')[0];
+            const tabConsulta = document.querySelectorAll('.tab-btn')[1];
+            const secMinuta = document.getElementById('section-minuta');
+            const secConsulta = document.getElementById('section-consulta');
+
+            if(mode === 'minuta') {
+                tabMinuta.classList.add('active');
+                tabConsulta.classList.remove('active');
+                secMinuta.style.display = 'block';
+                secConsulta.style.display = 'none';
+            } else {
+                tabConsulta.classList.add('active');
+                tabMinuta.classList.remove('active');
+                secConsulta.style.display = 'block';
+                secMinuta.style.display = 'none';
+            }
+        }
+
+        // ENVÍO DE MINUTA A WHATSAPP
+        function enviarMinuta() {
+            const tipo = document.getElementById('minuta_tipo').value;
+            const nombre = document.getElementById('minuta_nombre').value || 'Cliente General';
+            const ciudad = document.getElementById('minuta_ciudad').value || 'No especificada';
+            const detalles = document.getElementById('minuta_detalles').value || 'Sin detalles adicionales';
+
+            const numTelefono = '573215467418'; // Tu número de prueba / Agencia ADEN
+
+            const texto = `⚖️ *SOLICITUD DE MINUTA / DOCUMENTO*%0A%0A` +
+                          `👤 *Nombre/Razón Social:* ${nombre}%0A` +
+                          `📜 *Tipo de Minuta:* ${tipo}%0A` +
+                          `📍 *Ciudad:* ${ciudad}%0A` +
+                          `📝 *Detalles:* ${detalles}%0A%0A` +
+                          `_Solicitud enviada desde la Plataforma Digital del Despacho._`;
+
+            window.open(`https://wa.me/${numTelefono}?text=${texto}`, '_blank');
+        }
+
+        // ENVÍO DE CONSULTA A WHATSAPP
+        function enviarConsulta() {
+            const area = document.getElementById('consulta_area').value;
+            const tipo = document.getElementById('consulta_tipo').value;
+            const nombre = document.getElementById('consulta_nombre').value || 'Cliente General';
+            const resumen = document.getElementById('consulta_resumen').value || 'Desea agendar cita presencial/virtual';
+
+            const numTelefono = '573215467418'; // Tu número de prueba / Agencia ADEN
+
+            const texto = `⚖️ *EVALUACIÓN ESTRATÉGICA DE CASO*%0A%0A` +
+                          `👤 *Cliente:* ${nombre} (${tipo})%0A` +
+                          `📚 *Área Jurídica:* ${area}%0A` +
+                          `💬 *Resumen del Caso:* ${resumen}%0A%0A` +
+                          `_Solicitud de agendamiento previo desde el sitio web._`;
+
+            window.open(`https://wa.me/${numTelefono}?text=${texto}`, '_blank');
+        }
+    </script>
+</body>
+</html>
