@@ -138,7 +138,6 @@
             border: none;
         }
 
-        /* BOTÓN DEL ENCABEZADO REAJUSTADO */
         .btn-nav {
             padding: 0.55rem 1.1rem;
             font-size: 0.85rem;
@@ -358,7 +357,7 @@
             font-size: 0.9rem;
         }
 
-        /* BARRA INFERIOR CON ALINEACIÓN IZQUIERDA / DERECHA */
+        /* BARRA INFERIOR CON ALINEACIÓN AJUSTADA HACIA EL CENTRO */
         .footer-bottom {
             max-width: 1200px;
             margin: 1.8rem auto 0;
@@ -369,6 +368,7 @@
             gap: 1rem;
             color: #64748b;
             font-size: 0.85rem;
+            padding-right: 90px; /* Margen para asegurar separación con el botón flotante */
         }
 
         .footer-bottom-left {
@@ -382,13 +382,13 @@
             flex-wrap: wrap;
         }
 
-        .footer-bottom-right a {
+        .footer-bottom-right a.agency-link {
             color: #94a3b8;
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-bottom-right a:hover {
+        .footer-bottom-right a.agency-link:hover {
             color: var(--accent);
         }
 
@@ -436,6 +436,8 @@
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+                padding-right: 0;
+                padding-bottom: 70px; /* Espacio para no chocar con el botón flotante en celular */
             }
             .footer-bottom-left, .footer-bottom-right {
                 justify-content: center;
@@ -617,8 +619,8 @@
                 &copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados
             </div>
             <div class="footer-bottom-right">
-                <a href="https://agencia-aden.vercel.app/" target="_blank">Agencia ADEN Digital</a>
-                <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" class="btn-footer-wa">💬 WhatsApp Agencia</a>
+                <a href="https://agencia-aden.vercel.app/" target="_blank" class="agency-link">Desarrollado por Agencia ADEN Digital visítanos aquí</a>
+                <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" class="btn-footer-wa">consulta directa aquí</a>
             </div>
         </div>
     </footer>
