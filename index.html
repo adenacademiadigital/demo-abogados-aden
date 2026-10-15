@@ -42,14 +42,15 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
@@ -66,14 +67,16 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
+            margin-left: auto;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-main);
             font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.2s;
         }
 
@@ -133,6 +136,14 @@
             cursor: pointer;
             text-align: center;
             border: none;
+        }
+
+        /* BOTÓN DEL ENCABEZADO REAJUSTADO */
+        .btn-nav {
+            padding: 0.55rem 1.1rem;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -241,7 +252,7 @@
             font-size: 0.95rem;
         }
 
-        /* INTERACTIVE MODULES (MINUTAS & EVALUADOR) */
+        /* INTERACTIVE MODULES */
         .interactive-section {
             background-color: #f1f5f9;
         }
@@ -305,7 +316,7 @@
             background: var(--white);
         }
 
-        /* FOOTER */
+        /* FOOTER REESTRUCTURADO */
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -316,10 +327,10 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
             border-bottom: 1px solid #334155;
-            padding-bottom: 3rem;
+            padding-bottom: 2.5rem;
         }
 
         .footer-col h3 {
@@ -343,42 +354,52 @@
 
         .footer-col ul li {
             margin-bottom: 0.6rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
         }
 
-        .footer-col ul li a {
+        /* BARRA INFERIOR CON ALINEACIÓN IZQUIERDA / DERECHA */
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 1.8rem auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom-left {
+            text-align: left;
+        }
+
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-right a {
             color: #94a3b8;
             text-decoration: none;
-            font-size: 0.9rem;
             transition: color 0.2s;
         }
 
-        .footer-col ul li a:hover {
+        .footer-bottom-right a:hover {
             color: var(--accent);
         }
 
-        .btn-agency {
-            display: inline-block;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
+        .btn-footer-wa {
+            background-color: #25d366;
+            color: #ffffff !important;
+            padding: 0.35rem 0.8rem;
+            border-radius: 4px;
             font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 0.8rem;
-            transition: transform 0.2s;
-        }
-
-        .btn-agency:hover {
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 2rem auto 0;
-            text-align: center;
-            color: #64748b;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            text-decoration: none;
         }
 
         /* WHATSAPP FLOAT */
@@ -412,6 +433,14 @@
             .nav-links {
                 display: none;
             }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom-left, .footer-bottom-right {
+                justify-content: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -430,7 +459,7 @@
                 <li><a href="#evaluador">Evaluador de Casos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20quisiera%20solicitar%20asesoria%20juridica." class="btn btn-primary" target="_blank">Consultar por WhatsApp</a>
+            <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20quisiera%20solicitar%20asesoria%20juridica." class="btn btn-primary btn-nav" target="_blank">Consultar por WhatsApp</a>
         </div>
     </header>
 
@@ -445,7 +474,7 @@
                 <a href="#minutas" class="btn btn-outline">Solicitar Minuta / Contrato 📄</a>
             </div>
 
-            <!-- METRICAS DE EXPERIENCIA Y EFECTIVIDAD -->
+            <!-- METRICAS -->
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>12+</h3>
@@ -487,14 +516,14 @@
         </div>
     </section>
 
-    <!-- INTERACTIVE SECTION (COTIZADOR DE MINUTAS + EVALUADOR DE CASOS) -->
+    <!-- INTERACTIVE SECTION -->
     <section class="section interactive-section" id="minutas">
         <h2 class="section-title">Módulos de Gestión Jurídica Digital</h2>
         <p class="section-subtitle">Seleccione el documento que requiere o envíe su caso para una evaluación preliminar en tiempo real.</p>
 
         <div class="interactive-grid">
             
-            <!-- MÓDULO 1: COTIZADOR Y SOLICITUD DE MINUTAS -->
+            <!-- MÓDULO 1: COTIZADOR DE MINUTAS -->
             <div class="form-box" id="cotizador-box">
                 <h3>📝 Solicitud & Cotización de Minutas</h3>
                 <p>Seleccione el tipo de documento legal que requiere maquetar o revisar:</p>
@@ -528,7 +557,7 @@
                 </form>
             </div>
 
-            <!-- MÓDULO 2: EVALUADOR ESTRATÉGICO DE CASOS -->
+            <!-- MÓDULO 2: EVALUADOR DE CASOS -->
             <div class="form-box" id="evaluador">
                 <h3>⚖️ Evaluador Previo de Casos</h3>
                 <p>Envíe un resumen de su situación jurídica para realizar un filtro estratégico previo:</p>
@@ -566,16 +595,14 @@
     <!-- FOOTER -->
     <footer id="contacto">
         <div class="footer-container">
-            <!-- COLUMNA 1: PERFIL DOCTOR -->
             <div class="footer-col">
                 <h3>Dr. Cley Serpa Ospina</h3>
-                <p>Abogado Titular especializado en Asistencia Jurídica y Representación Legal. Atención personalizada a personas y empresas.</p>
+                <p>Abogado Titular especializado en Asistencia Jurídica y Representación Legal. Atención personalizada a personas naturales y sector comercial.</p>
                 <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #cbd5e1;">📍 Calle 70 #72-40, Laureles Terminal, Carepa, Antioquia.</p>
             </div>
 
-            <!-- COLUMNA 2: CONTACTO OFICIAL -->
             <div class="footer-col">
-                <h3>Contacto Directo</h3>
+                <h3>Contacto Oficial</h3>
                 <ul>
                     <li>📞 <strong>WhatsApp:</strong> +57 313 790 1832</li>
                     <li>✉️ <strong>Correo 1:</strong> cleyserpaospina@hotmail.com</li>
@@ -583,22 +610,16 @@
                     <li>🕒 <strong>Atención:</strong> Lunes a Viernes 8:00 AM - 6:00 PM</li>
                 </ul>
             </div>
-
-            <!-- COLUMNA 3: DESARROLLADOR / AGENCIA ADEN -->
-            <div class="footer-col">
-                <h3>Agencia ADEN Digital</h3>
-                <p>Plataforma desarrollada con infraestructura web de alta conversión e inteligencia de negocio.</p>
-                <a href="https://agencia-aden.vercel.app/" target="_blank" class="btn-agency">🌐 Visitar Agencia ADEN</a>
-                <div style="margin-top: 0.8rem;">
-                    <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" style="color: #25d366; text-decoration: none; font-size: 0.85rem; font-weight: bold;">
-                        💬 Contactar a Agencia ADEN por WhatsApp
-                    </a>
-                </div>
-            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados. Infraestructura tecnológica operada por <strong>Agencia ADEN Digital</strong>.</p>
+            <div class="footer-bottom-left">
+                &copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados
+            </div>
+            <div class="footer-bottom-right">
+                <a href="https://agencia-aden.vercel.app/" target="_blank">Agencia ADEN Digital</a>
+                <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" class="btn-footer-wa">💬 WhatsApp Agencia</a>
+            </div>
         </div>
     </footer>
 
@@ -607,7 +628,7 @@
         💬
     </a>
 
-    <!-- SCRIPTS PARA ENVÍO A WHATSAPP -->
+    <!-- SCRIPTS -->
     <script>
         function enviarMinutaWhatsApp(e) {
             e.preventDefault();
