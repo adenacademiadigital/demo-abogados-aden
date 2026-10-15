@@ -357,7 +357,7 @@
             font-size: 0.9rem;
         }
 
-        /* BARRA INFERIOR CON ALINEACIÓN AJUSTADA HACIA EL CENTRO */
+        /* BARRA INFERIOR */
         .footer-bottom {
             max-width: 1200px;
             margin: 1.8rem auto 0;
@@ -368,7 +368,7 @@
             gap: 1rem;
             color: #64748b;
             font-size: 0.85rem;
-            padding-right: 90px; /* Margen para asegurar separación con el botón flotante */
+            padding-right: 90px;
         }
 
         .footer-bottom-left {
@@ -378,28 +378,43 @@
         .footer-bottom-right {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.6rem;
             flex-wrap: wrap;
-        }
-
-        .footer-bottom-right a.agency-link {
             color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.2s;
         }
 
-        .footer-bottom-right a.agency-link:hover {
-            color: var(--accent);
-        }
-
-        .btn-footer-wa {
-            background-color: #25d366;
-            color: #ffffff !important;
-            padding: 0.35rem 0.8rem;
+        /* BOTÓN RECUADRO PARA VISÍTANOS AQUÍ */
+        .btn-visit-agency {
+            background-color: #1e293b;
+            color: var(--accent) !important;
+            border: 1px solid var(--accent);
+            padding: 0.3rem 0.65rem;
             border-radius: 4px;
             font-weight: 700;
             font-size: 0.8rem;
             text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-visit-agency:hover {
+            background-color: var(--accent);
+            color: var(--primary) !important;
+        }
+
+        /* BOTÓN DE WHATSAPP CON CLARIDAD DE LA AGENCIA */
+        .btn-footer-wa {
+            background-color: #25d366;
+            color: #ffffff !important;
+            padding: 0.35rem 0.85rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-decoration: none;
+            margin-left: 0.4rem;
+        }
+
+        .btn-footer-wa:hover {
+            background-color: #1eb854;
         }
 
         /* WHATSAPP FLOAT */
@@ -437,7 +452,7 @@
                 flex-direction: column;
                 text-align: center;
                 padding-right: 0;
-                padding-bottom: 70px; /* Espacio para no chocar con el botón flotante en celular */
+                padding-bottom: 70px;
             }
             .footer-bottom-left, .footer-bottom-right {
                 justify-content: center;
@@ -619,8 +634,9 @@
                 &copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados
             </div>
             <div class="footer-bottom-right">
-                <a href="https://agencia-aden.vercel.app/" target="_blank" class="agency-link">Desarrollado por Agencia ADEN Digital visítanos aquí</a>
-                <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" class="btn-footer-wa">consulta directa aquí</a>
+                <span>Desarrollado por Agencia ADEN Digital</span>
+                <a href="https://agencia-aden.vercel.app/" target="_blank" class="btn-visit-agency">visítanos aquí</a>
+                <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" class="btn-footer-wa">💬 Consulta directa a la Agencia aquí</a>
             </div>
         </div>
     </footer>
@@ -645,14 +661,4 @@
 
         function enviarCasoWhatsApp(e) {
             e.preventDefault();
-            const rama = document.getElementById('caso-rama').value;
-            const nombre = document.getElementById('caso-nombre').value;
-            const hechos = document.getElementById('caso-hechos').value;
-            
-            const mensaje = `Hola, Dr. Cley. Mi nombre es *${nombre}*.%0A%0AQuisiera enviar el siguiente caso para su evaluación previa:%0A⚖️ *Área:* ${rama}%0A📋 *Hechos:* ${hechos}`;
-            
-            window.open(`https://wa.me/573137901832?text=${mensaje}`, '_blank');
-        }
-    </script>
-</body>
-</html>
+            const rama = document.getElementById('caso
