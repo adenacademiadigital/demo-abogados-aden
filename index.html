@@ -49,7 +49,7 @@
         }
 
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
@@ -59,7 +59,7 @@
 
         .logo span {
             color: var(--accent);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 1px;
         }
@@ -85,7 +85,7 @@
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
             color: var(--white);
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
 
@@ -106,7 +106,7 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #cbd5e1;
             margin-bottom: 2.5rem;
             max-width: 750px;
@@ -119,18 +119,20 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.85rem 2rem;
-            font-size: 1rem;
+            padding: 0.85rem 1.8rem;
+            font-size: 0.95rem;
             font-weight: 700;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.2s;
             cursor: pointer;
             text-align: center;
+            border: none;
         }
 
         .btn-primary {
@@ -154,9 +156,32 @@
             background-color: rgba(197, 160, 89, 0.05);
         }
 
+        /* METRICAS / STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 0;
+        }
+
         /* SECTION STYLES */
         .section {
-            padding: 5rem 2rem;
+            padding: 4.5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -166,14 +191,14 @@
             font-size: 2.25rem;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .section-subtitle {
             text-align: center;
             color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
+            font-size: 1.05rem;
+            margin-bottom: 3.5rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -187,7 +212,7 @@
 
         .card {
             background: var(--white);
-            padding: 2.5rem 2rem;
+            padding: 2.2rem 1.8rem;
             border-radius: 12px;
             border: 1px solid var(--border);
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
@@ -200,8 +225,8 @@
         }
 
         .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.25rem;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
         }
 
         .card h3 {
@@ -216,31 +241,68 @@
             font-size: 0.95rem;
         }
 
-        /* PORTAL DE MINUTAS Y CASOS */
-        .portal-section {
+        /* INTERACTIVE MODULES (MINUTAS & EVALUADOR) */
+        .interactive-section {
             background-color: #f1f5f9;
         }
 
-        .portal-box {
+        .interactive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .form-box {
             background: var(--white);
             border-radius: 12px;
-            padding: 3rem;
+            padding: 2.2rem;
             border: 1px solid var(--border);
             box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
         }
 
-        .portal-box h3 {
-            font-size: 1.75rem;
+        .form-box h3 {
+            font-size: 1.4rem;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .portal-box p {
+        .form-box p {
             color: var(--text-light);
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            background: #f8fafc;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            background: var(--white);
         }
 
         /* FOOTER */
@@ -253,33 +315,62 @@
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
             border-bottom: 1px solid #334155;
             padding-bottom: 3rem;
         }
 
-        .footer-brand h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-brand p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        .footer-contact {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            text-align: right;
-        }
-
-        .footer-contact strong {
+        .footer-col h3 {
+            font-size: 1.2rem;
             color: var(--white);
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        .footer-col p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .btn-agency {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-agency:hover {
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
@@ -316,17 +407,10 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 2.1rem;
             }
             .nav-links {
                 display: none;
-            }
-            .footer-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-contact {
-                text-align: center;
             }
         }
     </style>
@@ -338,14 +422,15 @@
         <div class="nav-container">
             <a href="#" class="logo">
                 DR. CLEY SERPA OSPINA
-                <span>Asistencia Jurídica & Representación</span>
+                <span>Asistencia Jurídica & Representación Legal</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#minutas">Portal de Minutas</a></li>
+                <li><a href="#minutas">Cotizar Minutas</a></li>
+                <li><a href="#evaluador">Evaluador de Casos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20quisiera%20solicitar%20asesoria%20juridica%20o%20representacion." class="btn btn-primary" target="_blank">Consultar por WhatsApp</a>
+            <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20quisiera%20solicitar%20asesoria%20juridica." class="btn btn-primary" target="_blank">Consultar por WhatsApp</a>
         </div>
     </header>
 
@@ -353,63 +438,167 @@
     <section class="hero">
         <div class="hero-container">
             <h1>Defensa Estratégica y <span>Respaldo Legal Profesional</span></h1>
-            <p>Brindamos asistencia jurídica integral y representación legal con rigor ético, protegiendo sus derechos y los de su patrimonio en Carepa y la región de Urabá.</p>
+            <p>Asistencia jurídica integral y representación legal con rigor ético, protegiendo sus derechos y patrimonio en Carepa y la subregión de Urabá.</p>
+            
             <div class="hero-buttons">
-                <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20necesito%20una%20asesoria%20urgente." class="btn btn-primary" target="_blank">Agendar Asesoría Inmediata ⚖️</a>
-                <a href="#minutas" class="btn btn-outline">Solicitar Minuta o Contrato 📄</a>
+                <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20necesito%20una%20asesoria%20juridica%20urgente." class="btn btn-primary" target="_blank">Agendar Asesoría Directa ⚖️</a>
+                <a href="#minutas" class="btn btn-outline">Solicitar Minuta / Contrato 📄</a>
+            </div>
+
+            <!-- METRICAS DE EXPERIENCIA Y EFECTIVIDAD -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>12+</h3>
+                    <p>Años de Experiencia</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Efectividad en Casos</p>
+                </div>
+                <div class="stat-item">
+                    <h3>850+</h3>
+                    <p>Casos y Minutas Gestionadas</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ESPECIALIDADES -->
     <section class="section" id="especialidades">
-        <h2 class="section-title">Áreas de Práctica & Especialidades</h2>
-        <p class="section-subtitle">Soluciones jurídicas especializadas para personas naturales, empresas y sector comercial.</p>
+        <h2 class="section-title">Áreas de Práctica Jurídica</h2>
+        <p class="section-subtitle">Soluciones legales especializadas adaptadas a personas naturales, empresas y sector comercial.</p>
         
         <div class="grid-3">
             <div class="card">
                 <div class="card-icon">🏛️</div>
                 <h3>Derecho Civil & Patrimonial</h3>
-                <p>Procesos ejecutivos, responsabilidad civil, contratos, sucesiones y resolución de conflictos contractuales.</p>
+                <p>Procesos ejecutivos, responsabilidad civil, contratos, sucesiones, restitución de inmueble y resolución de conflictos contractuales.</p>
             </div>
             <div class="card">
                 <div class="card-icon">👥</div>
                 <h3>Derecho de Familia</h3>
-                <p>Divorcios, regulación de alimentos, custodia, visitas y procesos de sucesiones notariales y judiciales.</p>
+                <p>Divorcios de mutuo acuerdo o contenciosos, custodia, regulación de cuota alimentaria, fijación de visitas y partición de bienes.</p>
             </div>
             <div class="card">
                 <div class="card-icon">💼</div>
-                <h3>Derecho Laboral & Comercial</h3>
-                <p>Asesoría a empresas y trabajadores, liquidaciones, defensa en litigios laborales y constitución de sociedades.</p>
+                <h3>Laboral & Comercial</h3>
+                <p>Representación a empresas y trabajadores, liquidaciones contractuales, acoso laboral y constitución de sociedades comerciales.</p>
             </div>
         </div>
     </section>
 
-    <!-- PORTAL DE MINUTAS -->
-    <section class="section portal-section" id="minutas">
-        <div class="portal-box">
-            <span style="background: rgba(197,160,89,0.15); color: #9a7b3e; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Portal Jurídico</span>
-            <h3 style="margin-top: 1rem;">Solicitud de Minutas y Contratos</h3>
-            <p>¿Requiere la redacción o revisión de un documento legal a la medida? Solicite la elaboración de contratos de arrendamiento, promesas de compraventa, poderes especiales o conceptos jurídicos directamente con nuestro equipo.</p>
-            <a href="https://wa.me/573137901832?text=Hola,%20Dr.%20Cley,%20necesito%20solicitar%20la%20redaccion%20de%20una%20minuta%20o%20contrato." class="btn btn-primary" target="_blank">Solicitar Minuta por WhatsApp 📝</a>
+    <!-- INTERACTIVE SECTION (COTIZADOR DE MINUTAS + EVALUADOR DE CASOS) -->
+    <section class="section interactive-section" id="minutas">
+        <h2 class="section-title">Módulos de Gestión Jurídica Digital</h2>
+        <p class="section-subtitle">Seleccione el documento que requiere o envíe su caso para una evaluación preliminar en tiempo real.</p>
+
+        <div class="interactive-grid">
+            
+            <!-- MÓDULO 1: COTIZADOR Y SOLICITUD DE MINUTAS -->
+            <div class="form-box" id="cotizador-box">
+                <h3>📝 Solicitud & Cotización de Minutas</h3>
+                <p>Seleccione el tipo de documento legal que requiere maquetar o revisar:</p>
+                
+                <form id="form-minuta" onsubmit="enviarMinutaWhatsApp(event)">
+                    <div class="form-group">
+                        <label>Tipo de Documento o Minuta:</label>
+                        <select id="minuta-tipo" class="form-control" required>
+                            <option value="">-- Seleccionar Minuta --</option>
+                            <option value="Contrato de Arrendamiento (Vivienda / Comercial)">Contrato de Arrendamiento (Vivienda / Comercial)</option>
+                            <option value="Promesa de Compraventa de Inmueble/Vehículo">Promesa de Compraventa de Inmueble/Vehículo</option>
+                            <option value="Poder Especial Aclarado y Notarial">Poder Especial Aclarado y Notarial</option>
+                            <option value="Contrato de Prestación de Servicios / Comercial">Contrato de Prestación de Servicios / Comercial</option>
+                            <option value="Derecho de Petición / Tutela">Derecho de Petición / Tutela</option>
+                            <option value="Concepto Jurídico por Escrito">Concepto Jurídico por Escrito</option>
+                            <option value="Otro Documento Personalizado">Otro Documento Personalizado</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Su Nombre Completo:</label>
+                        <input type="text" id="minuta-nombre" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Detalles o Observaciones Básicas:</label>
+                        <textarea id="minuta-detalles" class="form-control" rows="3" placeholder="Escriba datos clave (partes, montos, ciudad, etc.)..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Solicitar Minuta por WhatsApp 🚀</button>
+                </form>
+            </div>
+
+            <!-- MÓDULO 2: EVALUADOR ESTRATÉGICO DE CASOS -->
+            <div class="form-box" id="evaluador">
+                <h3>⚖️ Evaluador Previo de Casos</h3>
+                <p>Envíe un resumen de su situación jurídica para realizar un filtro estratégico previo:</p>
+                
+                <form id="form-caso" onsubmit="enviarCasoWhatsApp(event)">
+                    <div class="form-group">
+                        <label>Rama del Derecho Relacionada:</label>
+                        <select id="caso-rama" class="form-control" required>
+                            <option value="">-- Seleccionar Área --</option>
+                            <option value="Civil / Contratos / Deudas">Civil / Contratos / Deudas</option>
+                            <option value="Familia / Alimentos / Divorcio">Familia / Alimentos / Divorcio</option>
+                            <option value="Laboral / Liquidación / Despido">Laboral / Liquidación / Despido</option>
+                            <option value="Comercial / Empresa">Comercial / Empresa</option>
+                            <option value="Otra Consulta Legal">Otra Consulta Legal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Su Nombre Completo:</label>
+                        <input type="text" id="caso-nombre" class="form-control" placeholder="Ej. Ana Lucía Gómez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Resumen de los Hechos del Caso:</label>
+                        <textarea id="caso-hechos" class="form-control" rows="3" placeholder="Describa brevemente lo sucedido..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Caso para Evaluación 📊</button>
+                </form>
+            </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer id="contacto">
         <div class="footer-container">
-            <div class="footer-brand">
-                <h2>Dr. Cley Serpa Ospina</h2>
-                <p>Abogado Titular — Asistencia Jurídica y Representación Legal.</p>
+            <!-- COLUMNA 1: PERFIL DOCTOR -->
+            <div class="footer-col">
+                <h3>Dr. Cley Serpa Ospina</h3>
+                <p>Abogado Titular especializado en Asistencia Jurídica y Representación Legal. Atención personalizada a personas y empresas.</p>
+                <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #cbd5e1;">📍 Calle 70 #72-40, Laureles Terminal, Carepa, Antioquia.</p>
             </div>
-            <div class="footer-contact">
-                <p>📍 <strong>Dirección:</strong> Calle 70 #72-40, Laureles Terminal, Carepa</p>
-                <p>📞 <strong>WhatsApp:</strong> +57 313 790 1832</p>
-                <p>✉️ <strong>Correo:</strong> cleyserpaospina@hotmail.com</p>
+
+            <!-- COLUMNA 2: CONTACTO OFICIAL -->
+            <div class="footer-col">
+                <h3>Contacto Directo</h3>
+                <ul>
+                    <li>📞 <strong>WhatsApp:</strong> +57 313 790 1832</li>
+                    <li>✉️ <strong>Correo 1:</strong> cleyserpaospina@hotmail.com</li>
+                    <li>✉️ <strong>Correo 2:</strong> kleyserpa@hotmail.com</li>
+                    <li>🕒 <strong>Atención:</strong> Lunes a Viernes 8:00 AM - 6:00 PM</li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA 3: DESARROLLADOR / AGENCIA ADEN -->
+            <div class="footer-col">
+                <h3>Agencia ADEN Digital</h3>
+                <p>Plataforma desarrollada con infraestructura web de alta conversión e inteligencia de negocio.</p>
+                <a href="https://agencia-aden.vercel.app/" target="_blank" class="btn-agency">🌐 Visitar Agencia ADEN</a>
+                <div style="margin-top: 0.8rem;">
+                    <a href="https://wa.me/573215467418?text=Hola,%20me%20interesa%20desarrollar%20una%20plataforma%20web%20como%20la%20del%20Dr.%20Cley" target="_blank" style="color: #25d366; text-decoration: none; font-size: 0.85rem; font-weight: bold;">
+                        💬 Contactar a Agencia ADEN por WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados. Desarrollado con Infraestructura Agencia ADEN Digital.</p>
+            <p>&copy; 2026 Dr. Cley Serpa Ospina — Todos los derechos reservados. Infraestructura tecnológica operada por <strong>Agencia ADEN Digital</strong>.</p>
         </div>
     </footer>
 
@@ -418,5 +607,29 @@
         💬
     </a>
 
+    <!-- SCRIPTS PARA ENVÍO A WHATSAPP -->
+    <script>
+        function enviarMinutaWhatsApp(e) {
+            e.preventDefault();
+            const tipo = document.getElementById('minuta-tipo').value;
+            const nombre = document.getElementById('minuta-nombre').value;
+            const detalles = document.getElementById('minuta-detalles').value;
+            
+            const mensaje = `Hola, Dr. Cley. Mi nombre es *${nombre}*.%0A%0AQuisiera solicitar la cotización/redacción del siguiente documento legal:%0A📄 *Documento:* ${tipo}%0A💬 *Observaciones:* ${detalles || 'Sin detalles adicionales'}`;
+            
+            window.open(`https://wa.me/573137901832?text=${mensaje}`, '_blank');
+        }
+
+        function enviarCasoWhatsApp(e) {
+            e.preventDefault();
+            const rama = document.getElementById('caso-rama').value;
+            const nombre = document.getElementById('caso-nombre').value;
+            const hechos = document.getElementById('caso-hechos').value;
+            
+            const mensaje = `Hola, Dr. Cley. Mi nombre es *${nombre}*.%0A%0AQuisiera enviar el siguiente caso para su evaluación previa:%0A⚖️ *Área:* ${rama}%0A📋 *Hechos:* ${hechos}`;
+            
+            window.open(`https://wa.me/573137901832?text=${mensaje}`, '_blank');
+        }
+    </script>
 </body>
 </html>
